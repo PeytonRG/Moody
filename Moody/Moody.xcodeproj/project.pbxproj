@@ -15,6 +15,7 @@
 		3F468EB824CE6BBA006E0448 /* Moody.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EB624CE6BBA006E0448 /* Moody.xcdatamodeld */; };
 		3F468EBA24CE6BBC006E0448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F468EB924CE6BBC006E0448 /* Assets.xcassets */; };
 		3F468EBD24CE6BBC006E0448 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F468EBB24CE6BBC006E0448 /* LaunchScreen.storyboard */; };
+		3F5BABC724D25DB7000966C6 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BABC624D25DB7000966C6 /* Entities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3F468EB924CE6BBC006E0448 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F468EBC24CE6BBC006E0448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F468EBE24CE6BBC006E0448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F5BABC624D25DB7000966C6 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				3F468EAD24CE6BBA006E0448 /* SceneDelegate.swift */,
 				3F468EAF24CE6BBA006E0448 /* FirstViewController.swift */,
 				3F468EB124CE6BBA006E0448 /* SecondViewController.swift */,
+				3F5BABC624D25DB7000966C6 /* Entities.swift */,
 				3F468EB324CE6BBA006E0448 /* Main.storyboard */,
 				3F468EB924CE6BBC006E0448 /* Assets.xcassets */,
 				3F468EBB24CE6BBC006E0448 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				3F468EB824CE6BBA006E0448 /* Moody.xcdatamodeld in Sources */,
 				3F468EB024CE6BBA006E0448 /* FirstViewController.swift in Sources */,
 				3F468EAC24CE6BBA006E0448 /* AppDelegate.swift in Sources */,
+				3F5BABC724D25DB7000966C6 /* Entities.swift in Sources */,
 				3F468EAE24CE6BBA006E0448 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

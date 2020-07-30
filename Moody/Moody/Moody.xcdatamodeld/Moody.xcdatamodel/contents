@@ -2,12 +2,12 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activity" representedClassName="Activity" syncable="YES" codeGenerationType="class">
         <attribute name="activityID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="activityName" optional="YES" attributeType="String"/>
         <relationship name="recordActivity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Record" inverseName="recordActivity" inverseEntity="Record"/>
     </entity>
     <entity name="Mood" representedClassName="Mood" syncable="YES" codeGenerationType="class">
         <attribute name="moodID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="moodName" optional="YES" attributeType="String"/>
         <relationship name="recordMood" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Record" inverseName="recordMood" inverseEntity="Record"/>
     </entity>
     <entity name="Record" representedClassName="Record" syncable="YES" codeGenerationType="class">
