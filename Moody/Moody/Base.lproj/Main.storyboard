@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Logs-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Moody" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CEl-66-8R1">
-                                <rect key="frame" x="157" y="378.5" width="100" height="100"/>
+                                <rect key="frame" x="157" y="400.5" width="100" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="8fJ-Wg-t0z">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -31,11 +31,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Logs" image="list.bullet" catalog="system" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="hxG-Gb-CS2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="G5R-2n-s2N">
+                            <connections>
+                                <segue destination="tun-W6-bWC" kind="presentation" identifier="AddRecordSegue" id="zY7-KV-CYi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
         </scene>
         <!--Reports-->
         <scene sceneID="wg7-f3-ORb">
@@ -78,7 +84,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="rZR-Nk-zsj" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
@@ -86,10 +92,111 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--Add New Log-->
+        <scene sceneID="uUx-uM-fff">
+            <objects>
+                <viewController id="XUT-38-xPL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RSA-bH-Mvp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIM-q0-2nI">
+                                <rect key="frame" x="275" y="107" width="75" height="73"/>
+                                <state key="normal" image="Happy"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-Nk-wqV">
+                                <rect key="frame" x="190" y="107" width="75" height="73"/>
+                                <state key="normal" image="Happy"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDN-nu-8nN">
+                                <rect key="frame" x="105" y="107" width="75" height="73"/>
+                                <state key="normal" image="Sad"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyI-HZ-bA0">
+                                <rect key="frame" x="20" y="107" width="75" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JyI-HZ-bA0" secondAttribute="height" multiplier="37:36" id="d6x-Ji-TUt"/>
+                                    <constraint firstAttribute="width" constant="75" id="v1r-Lt-FtD"/>
+                                </constraints>
+                                <state key="normal" image="Angry"/>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMd-fs-Qfb">
+                                <rect key="frame" x="0.0" y="542" width="414" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e0k-Nk-wqV" firstAttribute="leading" secondItem="zDN-nu-8nN" secondAttribute="trailing" constant="10" id="1XA-Cw-mLH"/>
+                            <constraint firstItem="JyI-HZ-bA0" firstAttribute="leading" secondItem="OE1-80-1AL" secondAttribute="leading" constant="20" id="EZt-mv-SVx"/>
+                            <constraint firstItem="zDN-nu-8nN" firstAttribute="width" secondItem="JyI-HZ-bA0" secondAttribute="width" id="H1w-ZG-FMd"/>
+                            <constraint firstItem="OE1-80-1AL" firstAttribute="bottom" secondItem="kMd-fs-Qfb" secondAttribute="bottom" constant="50" id="KvT-6V-y2b"/>
+                            <constraint firstItem="OE1-80-1AL" firstAttribute="trailing" secondItem="kMd-fs-Qfb" secondAttribute="trailing" id="Lps-7w-Isg"/>
+                            <constraint firstItem="JyI-HZ-bA0" firstAttribute="top" secondItem="OE1-80-1AL" secondAttribute="top" constant="51" id="Lsx-eX-WJR"/>
+                            <constraint firstItem="e0k-Nk-wqV" firstAttribute="width" secondItem="JyI-HZ-bA0" secondAttribute="width" id="MwV-4T-JVx"/>
+                            <constraint firstItem="zDN-nu-8nN" firstAttribute="centerY" secondItem="JyI-HZ-bA0" secondAttribute="centerY" id="O0l-J7-BhP"/>
+                            <constraint firstItem="aIM-q0-2nI" firstAttribute="height" secondItem="JyI-HZ-bA0" secondAttribute="height" id="QFI-j0-VPf"/>
+                            <constraint firstItem="e0k-Nk-wqV" firstAttribute="centerY" secondItem="JyI-HZ-bA0" secondAttribute="centerY" id="YMP-rv-JxI"/>
+                            <constraint firstItem="aIM-q0-2nI" firstAttribute="width" secondItem="JyI-HZ-bA0" secondAttribute="width" id="aSy-LH-eig"/>
+                            <constraint firstItem="aIM-q0-2nI" firstAttribute="centerY" secondItem="JyI-HZ-bA0" secondAttribute="centerY" id="cJB-Sj-exP"/>
+                            <constraint firstItem="zDN-nu-8nN" firstAttribute="height" secondItem="JyI-HZ-bA0" secondAttribute="height" id="fpy-34-BGE"/>
+                            <constraint firstItem="zDN-nu-8nN" firstAttribute="leading" secondItem="JyI-HZ-bA0" secondAttribute="trailing" constant="10" id="gKX-Dm-T1m"/>
+                            <constraint firstItem="e0k-Nk-wqV" firstAttribute="height" secondItem="JyI-HZ-bA0" secondAttribute="height" id="izD-Qm-faN"/>
+                            <constraint firstItem="kMd-fs-Qfb" firstAttribute="leading" secondItem="OE1-80-1AL" secondAttribute="leading" id="rqR-C3-1Hn"/>
+                            <constraint firstItem="aIM-q0-2nI" firstAttribute="leading" secondItem="e0k-Nk-wqV" secondAttribute="trailing" constant="10" id="wZ2-nD-RM5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OE1-80-1AL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Log" id="2c2-eR-5zU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jMR-vn-Xvj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="XTS-lz-L8S"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OX5-G3-L3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3526.0869565217395" y="-320.08928571428572"/>
+        </scene>
+        <!--Logs-->
+        <scene sceneID="Q0a-w1-Jr4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rZR-Nk-zsj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Logs" image="list.bullet" catalog="system" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fsy-0m-B72">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="g9V-U4-BQI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dxi-zq-Z3P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4ny-YH-OtK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tun-W6-bWC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nHW-SF-Pwt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XUT-38-xPL" kind="relationship" relationship="rootViewController" id="yYY-Ti-uz2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8j-hL-360" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2615.9420289855075" y="-320.08928571428572"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Angry" width="100" height="100"/>
         <image name="Happy" width="100" height="100"/>
+        <image name="Sad" width="100" height="100"/>
         <image name="chart.pie" catalog="system" width="128" height="121"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
     </resources>
