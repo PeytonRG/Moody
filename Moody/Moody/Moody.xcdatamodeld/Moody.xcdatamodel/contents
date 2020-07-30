@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Activity" representedClassName="Activity" syncable="YES" codeGenerationType="class">
+        <attribute name="activityID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="recordActivity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Record" inverseName="recordActivity" inverseEntity="Record"/>
+    </entity>
+    <entity name="Mood" representedClassName="Mood" syncable="YES" codeGenerationType="class">
+        <attribute name="moodID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="recordMood" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Record" inverseName="recordMood" inverseEntity="Record"/>
+    </entity>
+    <entity name="Record" representedClassName="Record" syncable="YES" codeGenerationType="class">
+        <attribute name="activityID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="moodID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="recordActivity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="recordActivity" inverseEntity="Activity"/>
+        <relationship name="recordMood" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mood" inverseName="recordMood" inverseEntity="Mood"/>
+    </entity>
+    <elements>
+        <element name="Mood" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Activity" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="Record" positionX="-45" positionY="36" width="128" height="118"/>
+    </elements>
 </model>
