@@ -9,27 +9,29 @@
 /* Begin PBXBuildFile section */
 		3F468EAC24CE6BBA006E0448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EAB24CE6BBA006E0448 /* AppDelegate.swift */; };
 		3F468EAE24CE6BBA006E0448 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EAD24CE6BBA006E0448 /* SceneDelegate.swift */; };
-		3F468EB024CE6BBA006E0448 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EAF24CE6BBA006E0448 /* LogsViewController.swift */; };
+		3F468EB024CE6BBA006E0448 /* MoodRecordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EAF24CE6BBA006E0448 /* MoodRecordsTableViewController.swift */; };
 		3F468EB224CE6BBA006E0448 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EB124CE6BBA006E0448 /* ReportsViewController.swift */; };
 		3F468EB524CE6BBA006E0448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F468EB324CE6BBA006E0448 /* Main.storyboard */; };
 		3F468EB824CE6BBA006E0448 /* Moody.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EB624CE6BBA006E0448 /* Moody.xcdatamodeld */; };
 		3F468EBA24CE6BBC006E0448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F468EB924CE6BBC006E0448 /* Assets.xcassets */; };
 		3F468EBD24CE6BBC006E0448 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F468EBB24CE6BBC006E0448 /* LaunchScreen.storyboard */; };
-		3F5BABC724D25DB7000966C6 /* MoodRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BABC624D25DB7000966C6 /* MoodRecord.swift */; };
+		3F5BABC724D25DB7000966C6 /* MoodDictionaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BABC624D25DB7000966C6 /* MoodDictionaries.swift */; };
+		3F789B2224D3B079006E4E88 /* MoodRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F789B2124D3B079006E4E88 /* MoodRecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F468EA824CE6BBA006E0448 /* Moody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F468EAB24CE6BBA006E0448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F468EAD24CE6BBA006E0448 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3F468EAF24CE6BBA006E0448 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
+		3F468EAF24CE6BBA006E0448 /* MoodRecordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordsTableViewController.swift; sourceTree = "<group>"; };
 		3F468EB124CE6BBA006E0448 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		3F468EB424CE6BBA006E0448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F468EB724CE6BBA006E0448 /* Moody.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moody.xcdatamodel; sourceTree = "<group>"; };
 		3F468EB924CE6BBC006E0448 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F468EBC24CE6BBC006E0448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F468EBE24CE6BBC006E0448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F5BABC624D25DB7000966C6 /* MoodRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecord.swift; sourceTree = "<group>"; };
+		3F5BABC624D25DB7000966C6 /* MoodDictionaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDictionaries.swift; sourceTree = "<group>"; };
+		3F789B2124D3B079006E4E88 /* MoodRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +66,10 @@
 			children = (
 				3F468EAB24CE6BBA006E0448 /* AppDelegate.swift */,
 				3F468EAD24CE6BBA006E0448 /* SceneDelegate.swift */,
-				3F468EAF24CE6BBA006E0448 /* LogsViewController.swift */,
+				3F468EAF24CE6BBA006E0448 /* MoodRecordsTableViewController.swift */,
+				3F789B2124D3B079006E4E88 /* MoodRecordViewController.swift */,
 				3F468EB124CE6BBA006E0448 /* ReportsViewController.swift */,
-				3F5BABC624D25DB7000966C6 /* MoodRecord.swift */,
+				3F5BABC624D25DB7000966C6 /* MoodDictionaries.swift */,
 				3F468EB324CE6BBA006E0448 /* Main.storyboard */,
 				3F468EB924CE6BBC006E0448 /* Assets.xcassets */,
 				3F468EBB24CE6BBC006E0448 /* LaunchScreen.storyboard */,
@@ -149,10 +152,11 @@
 			files = (
 				3F468EB224CE6BBA006E0448 /* ReportsViewController.swift in Sources */,
 				3F468EB824CE6BBA006E0448 /* Moody.xcdatamodeld in Sources */,
-				3F468EB024CE6BBA006E0448 /* LogsViewController.swift in Sources */,
+				3F468EB024CE6BBA006E0448 /* MoodRecordsTableViewController.swift in Sources */,
 				3F468EAC24CE6BBA006E0448 /* AppDelegate.swift in Sources */,
-				3F5BABC724D25DB7000966C6 /* MoodRecord.swift in Sources */,
+				3F5BABC724D25DB7000966C6 /* MoodDictionaries.swift in Sources */,
 				3F468EAE24CE6BBA006E0448 /* SceneDelegate.swift in Sources */,
+				3F789B2224D3B079006E4E88 /* MoodRecordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
