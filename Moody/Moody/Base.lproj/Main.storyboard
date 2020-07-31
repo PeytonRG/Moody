@@ -124,6 +124,9 @@
                                             <constraint firstAttribute="width" constant="60" id="WRW-39-OYn"/>
                                         </constraints>
                                         <state key="normal" image="Angry"/>
+                                        <connections>
+                                            <action selector="angryButtonPressed:" destination="XUT-38-xPL" eventType="touchUpInside" id="hqk-4K-CCn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDN-nu-8nN">
                                         <rect key="frame" x="70" y="0.0" width="60" height="60"/>
@@ -132,6 +135,9 @@
                                             <constraint firstAttribute="height" constant="60" id="jaO-Ky-Hte"/>
                                         </constraints>
                                         <state key="normal" image="Sad"/>
+                                        <connections>
+                                            <action selector="sadButtonPressed:" destination="XUT-38-xPL" eventType="touchUpInside" id="cx2-6v-8pW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-Nk-wqV">
                                         <rect key="frame" x="140" y="0.0" width="60" height="60"/>
@@ -140,6 +146,9 @@
                                             <constraint firstAttribute="height" constant="60" id="tAK-o1-L3V"/>
                                         </constraints>
                                         <state key="normal" image="Happy"/>
+                                        <connections>
+                                            <action selector="happyButtonPressed:" destination="XUT-38-xPL" eventType="touchUpInside" id="ziX-JE-dIr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIM-q0-2nI">
                                         <rect key="frame" x="210" y="0.0" width="60" height="60"/>
@@ -148,6 +157,9 @@
                                             <constraint firstAttribute="width" constant="60" id="aWB-Su-nrF"/>
                                         </constraints>
                                         <state key="normal" image="Angry"/>
+                                        <connections>
+                                            <action selector="excitedButtonPressed:" destination="XUT-38-xPL" eventType="touchUpInside" id="5ao-p5-tCd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zE-lV-FQt">
                                         <rect key="frame" x="280" y="0.0" width="60" height="60"/>
@@ -176,13 +188,19 @@
                                 <action selector="cancelButtonPressed:" destination="XUT-38-xPL" id="96d-Kc-5E2"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="XTS-lz-L8S"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="XTS-lz-L8S">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="XUT-38-xPL" id="P92-7E-TJG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="pickerView" destination="kMd-fs-Qfb" id="mfQ-si-kw9"/>
+                        <segue destination="1st-aM-BLO" kind="unwind" identifier="unwindToMoodRecordTableViewSegue" unwindAction="unwindToMoodRecordsListWithSender:" id="P3o-EN-Fex"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OX5-G3-L3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1st-aM-BLO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3526.0869565217395" y="-320.08928571428572"/>
         </scene>
