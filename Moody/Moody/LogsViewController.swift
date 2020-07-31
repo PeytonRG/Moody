@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class LogsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
