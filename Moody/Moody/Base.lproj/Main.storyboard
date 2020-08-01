@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
         </scene>
-        <!--Reports View Controller-->
+        <!--Happy Activities-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="ReportsViewController" customModule="Moody" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,7 +97,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WHd-Od-bO6"/>
+                    <navigationItem key="navigationItem" title="Happy Activities" id="WHd-Od-bO6"/>
                     <connections>
                         <outlet property="pieChartView" destination="NSl-DW-rqs" id="XRB-F9-ryP"/>
                     </connections>
@@ -273,11 +273,11 @@
             </objects>
             <point key="canvasLocation" x="3526.0869565217395" y="-320.08928571428572"/>
         </scene>
-        <!--Logs-->
+        <!--Records-->
         <scene sceneID="Q0a-w1-Jr4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rZR-Nk-zsj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Logs" image="list.bullet" catalog="system" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Records" image="pencil.and.outline" catalog="system" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fsy-0m-B72">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -310,11 +310,11 @@
             </objects>
             <point key="canvasLocation" x="2615.9420289855075" y="-320.08928571428572"/>
         </scene>
-        <!--Reports-->
+        <!--Analytics-->
         <scene sceneID="Tue-10-Pqn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sVP-SA-z2H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Reports" image="chart.pie" catalog="system" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Analytics" image="chart.pie" catalog="system" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rx4-QJ-MhO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -337,6 +337,6 @@
         <image name="Sad" width="100" height="100"/>
         <image name="Tired" width="100" height="100"/>
         <image name="chart.pie" catalog="system" width="128" height="121"/>
-        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="pencil.and.outline" catalog="system" width="128" height="119"/>
     </resources>
 </document>

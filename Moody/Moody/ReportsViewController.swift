@@ -18,10 +18,7 @@ class ReportsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
-        let unitsSold = [10.0, 4.0, 6.0, 3.0, 12.0, 16.0]
         GetCoreDataRecords()
-        //        setChart(dataPoints: Array(activityTypes.values), values: unitsSold)
     }
     
     func setChart(dataPoints: [String], values: [Double]) {
@@ -31,21 +28,32 @@ class ReportsViewController: UIViewController {
             dataEntries.append(dataEntry1)
         }
 
-        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "Activities")
-        let pieChartData = PieChartData(dataSet: pieChartDataSet)
-        pieChartView.data = pieChartData
+        let set = PieChartDataSet(entries: dataEntries, label: "Activities")
+        set.drawIconsEnabled = false
+        set.sliceSpace = 2
         
-        var colors: [UIColor] = []
         
-        for _ in 0..<dataPoints.count {
-            let red = Double(arc4random_uniform(256))
-            let green = Double(arc4random_uniform(256))
-            let blue = Double(arc4random_uniform(256))
-            
-            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-            colors.append(color)
-        }
-        pieChartDataSet.colors = colors
+        set.colors = ChartColorTemplates.vordiplom()
+            + ChartColorTemplates.joyful()
+            + ChartColorTemplates.colorful()
+            + ChartColorTemplates.liberty()
+            + ChartColorTemplates.pastel()
+            + [UIColor(red: 51/255, green: 181/255, blue: 229/255, alpha: 1)]
+        
+        let data = PieChartData(dataSet: set)
+        
+        let pFormatter = NumberFormatter()
+        pFormatter.numberStyle = .percent
+        pFormatter.maximumFractionDigits = 2
+        pFormatter.multiplier = 100.00
+        pFormatter.percentSymbol = " %"
+        data.setValueFormatter(DefaultValueFormatter(formatter: pFormatter))
+        
+        data.setValueFont(.systemFont(ofSize: 11, weight: .bold))
+        data.setValueTextColor(.white)
+        
+        pieChartView.data = data
+        pieChartView.highlightValues(nil)
     }
     
     func GetCoreDataRecords() {
