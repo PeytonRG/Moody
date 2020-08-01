@@ -124,7 +124,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Mood Record-->
+        <!--Add Record-->
         <scene sceneID="uUx-uM-fff">
             <objects>
                 <viewController id="XUT-38-xPL" customClass="MoodRecordViewController" customModule="Moody" customModuleProvider="target" sceneMemberID="viewController">
@@ -246,7 +246,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OE1-80-1AL"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Mood Record" id="2c2-eR-5zU">
+                    <navigationItem key="navigationItem" title="Add Record" id="2c2-eR-5zU">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jMR-vn-Xvj">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="XUT-38-xPL" id="96d-Kc-5E2"/>
