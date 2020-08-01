@@ -18,6 +18,7 @@
 		3F5BABC724D25DB7000966C6 /* MoodDictionaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BABC624D25DB7000966C6 /* MoodDictionaries.swift */; };
 		3F769F6224D5E752007D6753 /* MoodRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F769F6124D5E752007D6753 /* MoodRecordTableViewCell.swift */; };
 		3F789B2224D3B079006E4E88 /* MoodRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F789B2124D3B079006E4E88 /* MoodRecordViewController.swift */; };
+		5E3244A7CED8B0395898BB17 /* Pods_Moody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745223FB21BEBC60BE1A9F97 /* Pods_Moody.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		3F5BABC624D25DB7000966C6 /* MoodDictionaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDictionaries.swift; sourceTree = "<group>"; };
 		3F769F6124D5E752007D6753 /* MoodRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordTableViewCell.swift; sourceTree = "<group>"; };
 		3F789B2124D3B079006E4E88 /* MoodRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewController.swift; sourceTree = "<group>"; };
+		519345C37EFFF23BCC04DBE7 /* Pods-Moody.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moody.release.xcconfig"; path = "Target Support Files/Pods-Moody/Pods-Moody.release.xcconfig"; sourceTree = "<group>"; };
+		745223FB21BEBC60BE1A9F97 /* Pods_Moody.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moody.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA899D9A66984D95F0313086 /* Pods-Moody.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moody.debug.xcconfig"; path = "Target Support Files/Pods-Moody/Pods-Moody.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3244A7CED8B0395898BB17 /* Pods_Moody.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1071CCE22369C4E36DECC6CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA899D9A66984D95F0313086 /* Pods-Moody.debug.xcconfig */,
+				519345C37EFFF23BCC04DBE7 /* Pods-Moody.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3F468E9F24CE6BBA006E0448 = {
 			isa = PBXGroup;
 			children = (
 				3F468EAA24CE6BBA006E0448 /* Moody */,
 				3F468EA924CE6BBA006E0448 /* Products */,
+				1071CCE22369C4E36DECC6CC /* Pods */,
+				44EFDADCD9B3A52A56585668 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +99,14 @@
 			path = Moody;
 			sourceTree = "<group>";
 		};
+		44EFDADCD9B3A52A56585668 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				745223FB21BEBC60BE1A9F97 /* Pods_Moody.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F468EC124CE6BBC006E0448 /* Build configuration list for PBXNativeTarget "Moody" */;
 			buildPhases = (
+				C51F96B72C37AF7D09C0DF08 /* [CP] Check Pods Manifest.lock */,
 				3F468EA424CE6BBA006E0448 /* Sources */,
 				3F468EA524CE6BBA006E0448 /* Frameworks */,
 				3F468EA624CE6BBA006E0448 /* Resources */,
+				E2788C67A19EC0958D43EACE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +174,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C51F96B72C37AF7D09C0DF08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moody-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2788C67A19EC0958D43EACE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moody/Pods-Moody-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moody/Pods-Moody-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moody/Pods-Moody-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F468EA424CE6BBA006E0448 /* Sources */ = {
@@ -302,6 +371,7 @@
 		};
 		3F468EC224CE6BBC006E0448 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA899D9A66984D95F0313086 /* Pods-Moody.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -320,6 +390,7 @@
 		};
 		3F468EC324CE6BBC006E0448 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 519345C37EFFF23BCC04DBE7 /* Pods-Moody.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
