@@ -41,6 +41,30 @@ class MoodRecordsTableViewController: UITableViewController {
         return cell
     }
     
+    //    MARK: Table View Delete Support
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            do {
+                guard let appDelegate =
+                    UIApplication.shared.delegate as? AppDelegate else {
+                        return
+                }
+                
+                // Remove the album from core data
+                let managedContext =
+                    appDelegate.persistentContainer.viewContext
+                
+                managedContext.delete(moodRecords[indexPath.row])
+                
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+            moodRecords.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     //    MARK: Navigation
     
     override func viewWillAppear(_ animated: Bool) {
