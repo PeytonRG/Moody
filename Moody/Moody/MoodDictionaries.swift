@@ -10,8 +10,9 @@ import Foundation
 
 let moodTypes = [1: "Angry",
                  2: "Sad",
-                 3: "Happy",
-                 4: "Excited"]
+                 3: "Indifferent",
+                 4: "Tired",
+                 5: "Happy"]
 
 let activityTypes = [1: "Sports",
                      2: "Gaming",
