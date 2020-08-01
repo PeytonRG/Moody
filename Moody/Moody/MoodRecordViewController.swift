@@ -52,7 +52,7 @@ class MoodRecordViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     func setLabelColor(_ position: Int) {
         for index in 0...moodLabels.count - 1 {
-            moodLabels[index].textColor = UIColor.black
+            moodLabels[index].textColor = UIColor.label
         }
         moodLabels[position].textColor = UIColor.systemBlue
     }
