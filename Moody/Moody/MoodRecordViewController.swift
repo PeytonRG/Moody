@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import os.log
 
 class MoodRecordViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -33,11 +32,14 @@ class MoodRecordViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBAction func sadButtonPressed(_ sender: Any) {
         selectedMood = 2
     }
-    @IBAction func happyButtonPressed(_ sender: Any) {
+    @IBAction func indifferentButtonPressed(_ sender: Any) {
         selectedMood = 3
     }
-    @IBAction func excitedButtonPressed(_ sender: Any) {
+    @IBAction func tiredButtonPressed(_ sender: Any) {
         selectedMood = 4
+    }
+    @IBAction func happyButtonPressed(_ sender: Any) {
+        selectedMood = 5
     }
     
     // MARK: PickerView Setup

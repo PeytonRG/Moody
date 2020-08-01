@@ -145,9 +145,9 @@
                                             <constraint firstAttribute="width" constant="60" id="cXV-ec-aDB"/>
                                             <constraint firstAttribute="height" constant="60" id="tAK-o1-L3V"/>
                                         </constraints>
-                                        <state key="normal" image="Happy"/>
+                                        <state key="normal" image="Indifferent"/>
                                         <connections>
-                                            <action selector="happyButtonPressed:" destination="XUT-38-xPL" eventType="touchUpInside" id="ziX-JE-dIr"/>
+                                            <action selector="indifferentButtonPressed:" destination="XUT-38-xPL" eventType="touchUpInside" id="VOv-rh-y52"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIM-q0-2nI">
@@ -156,9 +156,9 @@
                                             <constraint firstAttribute="height" constant="60" id="Qpy-a6-h0J"/>
                                             <constraint firstAttribute="width" constant="60" id="aWB-Su-nrF"/>
                                         </constraints>
-                                        <state key="normal" image="Angry"/>
+                                        <state key="normal" image="Tired"/>
                                         <connections>
-                                            <action selector="excitedButtonPressed:" destination="XUT-38-xPL" eventType="touchUpInside" id="5ao-p5-tCd"/>
+                                            <action selector="tiredButtonPressed:" destination="XUT-38-xPL" eventType="touchUpInside" id="5ao-p5-tCd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zE-lV-FQt">
@@ -167,7 +167,10 @@
                                             <constraint firstAttribute="height" constant="60" id="8D4-uT-SJX"/>
                                             <constraint firstAttribute="width" constant="60" id="CLV-2r-hHg"/>
                                         </constraints>
-                                        <state key="normal" image="Sad"/>
+                                        <state key="normal" image="Happy"/>
+                                        <connections>
+                                            <action selector="happyButtonPressed:" destination="XUT-38-xPL" eventType="touchUpInside" id="TqV-Ny-Wpe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -226,7 +229,6 @@
         <!--Navigation Controller-->
         <scene sceneID="4ny-YH-OtK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g8j-hL-360" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tun-W6-bWC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nHW-SF-Pwt">
@@ -238,6 +240,7 @@
                         <segue destination="XUT-38-xPL" kind="relationship" relationship="rootViewController" id="yYY-Ti-uz2"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8j-hL-360" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2615.9420289855075" y="-320.08928571428572"/>
         </scene>
@@ -264,7 +267,9 @@
     <resources>
         <image name="Angry" width="100" height="100"/>
         <image name="Happy" width="100" height="100"/>
+        <image name="Indifferent" width="100" height="100"/>
         <image name="Sad" width="100" height="100"/>
+        <image name="Tired" width="100" height="100"/>
         <image name="chart.pie" catalog="system" width="128" height="121"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
     </resources>
