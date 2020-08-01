@@ -11,8 +11,6 @@ import CoreData
 
 class MoodRecordViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var pickerView: UIPickerView!
-    
     private var selectedMood: Int = 0
     
     override func viewDidLoad() {
@@ -22,24 +20,41 @@ class MoodRecordViewController: UIViewController, UIPickerViewDelegate, UIPicker
         pickerView.dataSource = self
     }
     
+    // MARK: Outlets and Actions
+    
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet var moodLabels: [UILabel]!
+    
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func angryButtonPressed(_ sender: Any) {
+        setLabelColor(0)
         selectedMood = 1
     }
     @IBAction func sadButtonPressed(_ sender: Any) {
+        setLabelColor(1)
         selectedMood = 2
     }
     @IBAction func indifferentButtonPressed(_ sender: Any) {
+        setLabelColor(2)
         selectedMood = 3
     }
     @IBAction func tiredButtonPressed(_ sender: Any) {
+        setLabelColor(3)
         selectedMood = 4
     }
     @IBAction func happyButtonPressed(_ sender: Any) {
+        setLabelColor(4)
         selectedMood = 5
+    }
+    
+    func setLabelColor(_ position: Int) {
+        for index in 0...moodLabels.count - 1 {
+            moodLabels[index].textColor = UIColor.black
+        }
+        moodLabels[position].textColor = UIColor.systemBlue
     }
     
     // MARK: PickerView Setup

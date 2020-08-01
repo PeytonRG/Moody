@@ -239,6 +239,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="pickerView" destination="kMd-fs-Qfb" id="mfQ-si-kw9"/>
+                        <outletCollection property="moodLabels" destination="ErH-3z-qZ1" collectionClass="NSMutableArray" id="GtR-Iw-hP8"/>
+                        <outletCollection property="moodLabels" destination="UBX-2F-sLx" collectionClass="NSMutableArray" id="bYS-5q-SBY"/>
+                        <outletCollection property="moodLabels" destination="8gK-CN-PHy" collectionClass="NSMutableArray" id="mof-W9-zP7"/>
+                        <outletCollection property="moodLabels" destination="SVu-Uq-Bc2" collectionClass="NSMutableArray" id="mIh-zB-52U"/>
+                        <outletCollection property="moodLabels" destination="n4X-6S-dDC" collectionClass="NSMutableArray" id="5QD-ws-JGg"/>
                         <segue destination="1st-aM-BLO" kind="unwind" identifier="unwindToMoodRecordTableViewSegue" unwindAction="unwindToMoodRecordsListWithSender:" id="P3o-EN-Fex"/>
                     </connections>
                 </viewController>
