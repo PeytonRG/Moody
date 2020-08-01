@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Mood Records Table View Controller-->
+        <!--Mood Records-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="MoodRecordsTableViewController" customModule="Moody" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,33 +16,54 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MoodRecordTableViewCell" textLabel="HGT-Wj-jc3" detailTextLabel="7VL-bl-TUc" style="IBUITableViewCellStyleSubtitle" id="LiN-WN-LMf">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoodRecordTableViewCell" rowHeight="90" id="LiN-WN-LMf" customClass="MoodRecordTableViewCell" customModule="Moody" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LiN-WN-LMf" id="keP-iP-7T5">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HGT-Wj-jc3">
-                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzo-k2-Zek">
+                                            <rect key="frame" x="20" y="11" width="374" height="29"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkr-oj-vhi">
+                                            <rect key="frame" x="20" y="58" width="182" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7VL-bl-TUc">
-                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5E-Me-8w6">
+                                            <rect key="frame" x="210" y="58" width="184" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Vkr-oj-vhi" secondAttribute="bottom" constant="11" id="A6R-GX-eob"/>
+                                        <constraint firstItem="Vkr-oj-vhi" firstAttribute="leading" secondItem="keP-iP-7T5" secondAttribute="leading" constant="20" id="IDy-UG-shv"/>
+                                        <constraint firstItem="i5E-Me-8w6" firstAttribute="leading" secondItem="Vkr-oj-vhi" secondAttribute="trailing" constant="8" id="IVn-qg-e0h"/>
+                                        <constraint firstAttribute="trailing" secondItem="Vkr-oj-vhi" secondAttribute="trailing" constant="212" id="R7f-tR-VKz"/>
+                                        <constraint firstAttribute="trailing" secondItem="pzo-k2-Zek" secondAttribute="trailing" constant="20" id="a6F-jr-pZP"/>
+                                        <constraint firstItem="pzo-k2-Zek" firstAttribute="top" secondItem="keP-iP-7T5" secondAttribute="top" constant="11" id="hou-7l-WdY"/>
+                                        <constraint firstAttribute="trailing" secondItem="i5E-Me-8w6" secondAttribute="trailing" constant="20" id="jsm-gw-XTB"/>
+                                        <constraint firstItem="Vkr-oj-vhi" firstAttribute="top" secondItem="pzo-k2-Zek" secondAttribute="bottom" constant="18" id="mij-qG-5cM"/>
+                                        <constraint firstItem="pzo-k2-Zek" firstAttribute="leading" secondItem="keP-iP-7T5" secondAttribute="leading" constant="20" id="yDi-uJ-UAl"/>
+                                        <constraint firstItem="i5E-Me-8w6" firstAttribute="top" secondItem="pzo-k2-Zek" secondAttribute="bottom" constant="18" id="zhW-wy-Q1z"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activityLabel" destination="pzo-k2-Zek" id="Cli-aJ-0at"/>
+                                    <outlet property="dateLabel" destination="i5E-Me-8w6" id="WI0-tn-ZVm"/>
+                                    <outlet property="moodLabel" destination="Vkr-oj-vhi" id="dQx-qU-9D1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="hxG-Gb-CS2">
+                    <navigationItem key="navigationItem" title="Mood Records" id="hxG-Gb-CS2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="G5R-2n-s2N">
                             <connections>
                                 <segue destination="tun-W6-bWC" kind="presentation" identifier="AddRecordSegue" id="zY7-KV-CYi"/>

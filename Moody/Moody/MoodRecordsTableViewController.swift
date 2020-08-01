@@ -29,15 +29,24 @@ class MoodRecordsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let moodRecord = moodRecords[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MoodRecordTableViewCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MoodRecordTableViewCell", for: indexPath) as? MoodRecordTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of MoodRecordTableViewCell.")
+        }
         
         
         let activityID = moodRecord.value(forKeyPath: "activityID") as? Int
         let moodID = moodRecord.value(forKeyPath: "moodID") as? Int
+        let date = moodRecord.value(forKeyPath: "date") as? Date
+        
+        // convert the date from the entity to a string for the label
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        let dateString = formatter.string(from: date!)
         
         // Set the label text for the row
-        cell.textLabel!.text = activityTypes[activityID!]
-        cell.detailTextLabel!.text = moodTypes[moodID!]
+        cell.activityLabel!.text = activityTypes[activityID!]
+        cell.moodLabel!.text = moodTypes[moodID!]
+        cell.dateLabel!.text = dateString
         return cell
     }
     
@@ -92,22 +101,6 @@ class MoodRecordsTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         GetCoreDataRecords()
     }
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-//    {
-//        if segue.identifier == "AlbumDetailSegue"
-//        {
-//            if let indexPath = self.tableView.indexPathForSelectedRow {
-//                let controller = segue.destination as! AlbumDetailViewController
-//                let album = albums[indexPath.row]
-//                controller.albumTitle = album.value(forKeyPath: "title") as? String
-//                controller.artist = album.value(forKeyPath: "artist") as? String
-//                controller.releaseYear = album.value(forKeyPath: "releaseYear") as? Int
-//                controller.recordLabel = album.value(forKeyPath: "recordLabel") as? String
-//            }
-//        }
-//    }
     
     //    MARK: Unwind Segue Handler
     @IBAction func unwindToMoodRecordsList(sender: UIStoryboardSegue) {
