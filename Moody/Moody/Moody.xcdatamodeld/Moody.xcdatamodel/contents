@@ -4,9 +4,8 @@
         <attribute name="activityID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="moodID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="moodRecordID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="MoodRecord" positionX="-45" positionY="36" width="128" height="103"/>
+        <element name="MoodRecord" positionX="-45" positionY="36" width="128" height="88"/>
     </elements>
 </model>

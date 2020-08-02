@@ -90,8 +90,7 @@ class MoodRecordViewController: UIViewController, UIPickerViewDelegate, UIPicker
             let moodRecord = NSManagedObject(entity: entity,
                                              insertInto: managedContext)
             
-            //            set the attributes on that object
-            moodRecord.setValue(0, forKeyPath: "moodRecordID")
+            // Set the attributes on that object
             moodRecord.setValue(row, forKeyPath: "activityID")
             moodRecord.setValue(selectedMood, forKeyPath: "moodID")
             moodRecord.setValue(Date(), forKeyPath: "date")

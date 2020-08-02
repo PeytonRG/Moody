@@ -18,6 +18,8 @@ class PieChartViewController: UIViewController {
     var moodID: Int = 0
     var moodName: String = ""
     
+    // MARK: Navigation
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +32,8 @@ class PieChartViewController: UIViewController {
         
         GetCoreDataRecords()
     }
+    
+    // MARK: Chart Setup
     
     func setChart(dataPoints: [String], values: [Double]) {
         var dataEntries: [ChartDataEntry] = []
@@ -73,6 +77,8 @@ class PieChartViewController: UIViewController {
         pieChartView.data = data
         pieChartView.highlightValues(nil)
     }
+    
+    // MARK: Core Data
     
     func GetCoreDataRecords() {
         //        Get mood records from core data
