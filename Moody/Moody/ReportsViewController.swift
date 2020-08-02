@@ -27,11 +27,18 @@ class ReportsViewController: UIViewController {
             let dataEntry1 = PieChartDataEntry(value: values[i], label: dataPoints[i], data:  dataPoints[i] as AnyObject)
             dataEntries.append(dataEntry1)
         }
-
+        
         let set = PieChartDataSet(entries: dataEntries, label: "Activities")
         set.drawIconsEnabled = false
         set.sliceSpace = 2
         
+        let legend = pieChartView.legend
+        legend.horizontalAlignment = .right
+        legend.verticalAlignment = .top
+        legend.orientation = .vertical
+        legend.xEntrySpace = 7
+        legend.yEntrySpace = 0
+        legend.yOffset = 0
         
         set.colors = ChartColorTemplates.vordiplom()
             + ChartColorTemplates.joyful()
@@ -50,7 +57,8 @@ class ReportsViewController: UIViewController {
         data.setValueFormatter(DefaultValueFormatter(formatter: pFormatter))
         
         data.setValueFont(.systemFont(ofSize: 11, weight: .bold))
-        data.setValueTextColor(.white)
+        data.setValueTextColor(.black)
+        pieChartView.entryLabelColor = .black
         
         pieChartView.data = data
         pieChartView.highlightValues(nil)
