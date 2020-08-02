@@ -10,7 +10,7 @@
 		3F468EAC24CE6BBA006E0448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EAB24CE6BBA006E0448 /* AppDelegate.swift */; };
 		3F468EAE24CE6BBA006E0448 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EAD24CE6BBA006E0448 /* SceneDelegate.swift */; };
 		3F468EB024CE6BBA006E0448 /* MoodRecordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EAF24CE6BBA006E0448 /* MoodRecordsTableViewController.swift */; };
-		3F468EB224CE6BBA006E0448 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EB124CE6BBA006E0448 /* ReportsViewController.swift */; };
+		3F468EB224CE6BBA006E0448 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EB124CE6BBA006E0448 /* PieChartViewController.swift */; };
 		3F468EB524CE6BBA006E0448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F468EB324CE6BBA006E0448 /* Main.storyboard */; };
 		3F468EB824CE6BBA006E0448 /* Moody.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F468EB624CE6BBA006E0448 /* Moody.xcdatamodeld */; };
 		3F468EBA24CE6BBC006E0448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F468EB924CE6BBC006E0448 /* Assets.xcassets */; };
@@ -18,6 +18,7 @@
 		3F5BABC724D25DB7000966C6 /* MoodDictionaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BABC624D25DB7000966C6 /* MoodDictionaries.swift */; };
 		3F6258C124D622EA002B96D0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6258BE24D622E4002B96D0 /* Charts.framework */; };
 		3F6258C224D622EA002B96D0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6258BE24D622E4002B96D0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F6FEADD24D772940052B82C /* AnalyticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FEADC24D772940052B82C /* AnalyticsTableViewController.swift */; };
 		3F769F6224D5E752007D6753 /* MoodRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F769F6124D5E752007D6753 /* MoodRecordTableViewCell.swift */; };
 		3F789B2224D3B079006E4E88 /* MoodRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F789B2124D3B079006E4E88 /* MoodRecordViewController.swift */; };
 /* End PBXBuildFile section */
@@ -58,7 +59,7 @@
 		3F468EAB24CE6BBA006E0448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F468EAD24CE6BBA006E0448 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3F468EAF24CE6BBA006E0448 /* MoodRecordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordsTableViewController.swift; sourceTree = "<group>"; };
-		3F468EB124CE6BBA006E0448 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
+		3F468EB124CE6BBA006E0448 /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 		3F468EB424CE6BBA006E0448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F468EB724CE6BBA006E0448 /* Moody.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moody.xcdatamodel; sourceTree = "<group>"; };
 		3F468EB924CE6BBC006E0448 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		3F468EBE24CE6BBC006E0448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F5BABC624D25DB7000966C6 /* MoodDictionaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDictionaries.swift; sourceTree = "<group>"; };
 		3F6258B824D622E4002B96D0 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		3F6FEADC24D772940052B82C /* AnalyticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsTableViewController.swift; sourceTree = "<group>"; };
 		3F769F6124D5E752007D6753 /* MoodRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordTableViewCell.swift; sourceTree = "<group>"; };
 		3F789B2124D3B079006E4E88 /* MoodRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,8 +108,9 @@
 				3F468EAD24CE6BBA006E0448 /* SceneDelegate.swift */,
 				3F468EAF24CE6BBA006E0448 /* MoodRecordsTableViewController.swift */,
 				3F789B2124D3B079006E4E88 /* MoodRecordViewController.swift */,
-				3F468EB124CE6BBA006E0448 /* ReportsViewController.swift */,
 				3F769F6124D5E752007D6753 /* MoodRecordTableViewCell.swift */,
+				3F6FEADC24D772940052B82C /* AnalyticsTableViewController.swift */,
+				3F468EB124CE6BBA006E0448 /* PieChartViewController.swift */,
 				3F5BABC624D25DB7000966C6 /* MoodDictionaries.swift */,
 				3F468EB324CE6BBA006E0448 /* Main.storyboard */,
 				3F468EB924CE6BBC006E0448 /* Assets.xcassets */,
@@ -230,7 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F468EB224CE6BBA006E0448 /* ReportsViewController.swift in Sources */,
+				3F6FEADD24D772940052B82C /* AnalyticsTableViewController.swift in Sources */,
+				3F468EB224CE6BBA006E0448 /* PieChartViewController.swift in Sources */,
 				3F769F6224D5E752007D6753 /* MoodRecordTableViewCell.swift in Sources */,
 				3F468EB824CE6BBA006E0448 /* Moody.xcdatamodeld in Sources */,
 				3F468EB024CE6BBA006E0448 /* MoodRecordsTableViewController.swift in Sources */,
