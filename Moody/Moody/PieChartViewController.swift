@@ -15,9 +15,13 @@ class PieChartViewController: UIViewController {
     @IBOutlet weak var pieChartView: PieChartView!
     
     var moodRecords: [NSManagedObject] = []
+    var moodID: Int = 0
+    var moodName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "\(moodName) Activities"
         GetCoreDataRecords()
     }
     
@@ -74,12 +78,12 @@ class PieChartViewController: UIViewController {
         let managedContext =
             appDelegate.persistentContainer.viewContext
         
-        let fetchRequest =
-            NSFetchRequest<NSManagedObject>(entityName: "MoodRecord")
-        //        fetchRequest.predicate = NSPredicate(format: "moodID = %ld", 5)
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "MoodRecord")
+        fetchRequest.predicate = NSPredicate(format: "moodID = %ld", moodID)
         
         do {
             moodRecords = try managedContext.fetch(fetchRequest)
+            
             var values: [Int] = []
             for record in moodRecords {
                 let activityID = record.value(forKeyPath: "activityID") as? Int
@@ -99,7 +103,9 @@ class PieChartViewController: UIViewController {
                 activityNames.append(activityName)
             }
             
-            setChart(dataPoints: activityNames, values: percentages)
+            if moodRecords.count > 0 {
+                setChart(dataPoints: activityNames, values: percentages)
+            }
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }

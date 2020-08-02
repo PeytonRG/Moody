@@ -32,4 +32,19 @@ class AnalyticsTableViewController: UITableViewController {
         cell.textLabel!.text = mood
         return cell
     }
+    
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "MoodGraphSegue"
+        {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controller = segue.destination as! PieChartViewController
+
+                controller.moodID = indexPath.row + 1
+                controller.moodName = moodTypes[indexPath.row + 1]!
+            }
+        }
+    }
 }

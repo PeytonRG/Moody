@@ -84,7 +84,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSl-DW-rqs" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -329,7 +329,7 @@
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
         </scene>
-        <!--Analytics-->
+        <!--Select a Mood to View Data-->
         <scene sceneID="iZN-DE-jtN">
             <objects>
                 <tableViewController id="JkI-0d-JKO" customClass="AnalyticsTableViewController" customModule="Moody" customModuleProvider="target" sceneMemberID="viewController">
@@ -354,6 +354,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="8rJ-Kc-sve" kind="show" identifier="MoodGraphSegue" id="GiA-L0-SgJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -361,7 +364,7 @@
                             <outlet property="delegate" destination="JkI-0d-JKO" id="Hyc-Sh-oZ4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Analytics" id="YwM-gB-Hvu"/>
+                    <navigationItem key="navigationItem" title="Select a Mood to View Data" id="YwM-gB-Hvu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9pG-Hh-TTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
