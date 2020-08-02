@@ -25,6 +25,12 @@ class PieChartViewController: UIViewController {
         GetCoreDataRecords()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        GetCoreDataRecords()
+    }
+    
     func setChart(dataPoints: [String], values: [Double]) {
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<dataPoints.count {
